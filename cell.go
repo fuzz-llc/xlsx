@@ -252,6 +252,13 @@ func (c *Cell) SetFormula(formula string) {
 	c.cellType = CellTypeFormula
 }
 
+// SetFormulaWithFormat sets the formula string for a cell and applies formatting to the cell
+func (c *Cell) SetFormulaWithFormat(formula string, format string) {
+	c.formula = formula
+	c.cellType = CellTypeFormula
+	c.numFmt = format
+}
+
 // Formula returns the formula string for the cell.
 func (c *Cell) Formula() string {
 	return c.formula
